@@ -1,0 +1,84 @@
+.hire-me-section {
+    background: var(--bg-primary);
+}
+
+.fit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.fit-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    position: relative;
+    transition: all var(--transition-normal);
+}
+
+.fit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-primary);
+}
+
+.fit-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.fit-content {
+    flex: 1;
+}
+
+.fit-content h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.fit-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.fit-checkmark {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 32px;
+    height: 32px;
+    background: rgba(34, 197, 94, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.fit-checkmark svg {
+    color: #22c55e;
+}
+
+.fit-card:hover .fit-checkmark {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .fit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fit-card {
+        padding: var(--spacing-sm);
+    }
+
+    .fit-icon {
+        font-size: 2rem;
+    }
+}
